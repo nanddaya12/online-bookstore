@@ -1,0 +1,23 @@
+{
+  "name": "online-bookstore",
+  "version": "1.0.0",
+  "description": "A modern online bookstore with category filtering and user management",
+  "main": "index.html",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "install-browsers": "playwright install",
+    "start": "python -m http.server 8000"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nanddaya12/online-bookstore.git"
+  },
+  "author": "nanddaya12",
+  "license": "MIT",
+  "keywords": ["bookstore", "web-app", "javascript", "html", "css"]
+}
