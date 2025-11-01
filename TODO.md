@@ -1,0 +1,28 @@
+# TODO: Make the Best Online Bookstore Site for Deployment
+
+- [x] Update style.css for modern, responsive design
+- [x] Add book images and placeholders in script.js
+- [x] Fix admin add book to persist in localStorage
+- [x] Add search bar to index.html and functionality in script.js
+- [x] Enhance cart: add quantity, total, remove items in cart.html and script.js
+- [x] Test the site by running it locally
+- [x] Create signin.html for purchasers
+- [x] Create admin-signin.html for admins
+- [x] Implement simulated Google sign-in
+- [x] Add authentication logic in script.js
+- [x] Enhance checkout with form and confirmation
+- [x] Improve styling with animations and icons
+- [x] Add user roles and permissions
+- [x] Add order history for users
+- [x] Add card verification in checkout
+- [x] Test all new features
+- [ ] Add book categories and filtering
+- [ ] Create user profile page with order history
+- [ ] Add dark mode toggle
+- [ ] Add footer with links and contact info
+- [ ] Create about.html and contact.html pages
+- [ ] Improve fonts and icons (use Google Fonts and Font Awesome)
+- [ ] Add meta tags for SEO and deployment
+- [ ] Ensure mobile-first responsive design
+- [ ] Add loading animations and better UX
+- [ ] Final testing and deployment prep

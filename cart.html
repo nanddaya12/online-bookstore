@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🛒 Shopping Cart</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <section id="cartItems"></section>
+
+  <div class="cart-total" id="cartTotal"></div>
+
+  <div class="checkout-form" id="checkoutForm" style="display: none;">
+    <h2>Checkout</h2>
+    <form id="checkoutFormElement">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="Address" required />
+      <input type="text" placeholder="City" required />
+      <input type="text" placeholder="ZIP Code" required />
+      <select id="paymentMethod" required>
+        <option value="">Select Payment Method</option>
+        <option value="card">Credit Card</option>
+        <option value="paypal">PayPal</option>
+        <option value="bank">Bank Transfer</option>
+      </select>
+      <div id="cardDetails" style="display: none;">
+        <input type="text" placeholder="Card Number" required />
+        <input type="text" placeholder="Expiry Date (MM/YY)" required />
+        <input type="text" placeholder="CVV" required />
+      </div>
+      <button type="submit">Complete Purchase</button>
+    </form>
+  </div>
+
+  <button id="checkoutBtn">Proceed to Checkout</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
