@@ -1,11 +1,21 @@
-let books = JSON.parse(localStorage.getItem("books")) || [
+let books = [
   { title: "Java Basics", author: "James Gosling", price: 500, image: "https://via.placeholder.com/250x200?text=Java+Basics", category: "Programming" },
   { title: "Python for Beginners", author: "Guido van Rossum", price: 600, image: "https://via.placeholder.com/250x200?text=Python+for+Beginners", category: "Programming" },
   { title: "C++ Mastery", author: "Bjarne Stroustrup", price: 550, image: "https://via.placeholder.com/250x200?text=C%2B%2B+Mastery", category: "Programming" },
   { title: "The Great Gatsby", author: "F. Scott Fitzgerald", price: 450, image: "https://via.placeholder.com/250x200?text=The+Great+Gatsby", category: "Fiction" },
   { title: "To Kill a Mockingbird", author: "Harper Lee", price: 520, image: "https://via.placeholder.com/250x200?text=To+Kill+a+Mockingbird", category: "Fiction" },
-  { title: "1984", author: "George Orwell", price: 480, image: "https://via.placeholder.com/250x200?text=1984", category: "Fiction" }
+  { title: "1984", author: "George Orwell", price: 480, image: "https://via.placeholder.com/250x200?text=1984", category: "Fiction" },
+  { title: "Sapiens: A Brief History of Humankind", author: "Yuval Noah Harari", price: 650, image: "https://via.placeholder.com/250x200?text=Sapiens", category: "History" },
+  { title: "The Immortal Life of Henrietta Lacks", author: "Rebecca Skloot", price: 580, image: "https://via.placeholder.com/250x200?text=Henrietta+Lacks", category: "Biography" },
+  { title: "A Brief History of Time", author: "Stephen Hawking", price: 620, image: "https://via.placeholder.com/250x200?text=Brief+History+of+Time", category: "Science" },
+  { title: "Atomic Habits", author: "James Clear", price: 540, image: "https://via.placeholder.com/250x200?text=Atomic+Habits", category: "Self-Help" },
+  { title: "The Code Breaker", author: "Walter Isaacson", price: 590, image: "https://via.placeholder.com/250x200?text=Code+Breaker", category: "Biography" },
+  { title: "Thinking, Fast and Slow", author: "Daniel Kahneman", price: 570, image: "https://via.placeholder.com/250x200?text=Thinking+Fast+Slow", category: "Self-Help" }
 ];
+
+// Load additional books from localStorage if any
+const storedBooks = JSON.parse(localStorage.getItem("books")) || [];
+books = [...books, ...storedBooks.filter(storedBook => !books.some(book => book.title === storedBook.title))];
 
 let currentUser = JSON.parse(localStorage.getItem("currentUser")) || null;
 let users = JSON.parse(localStorage.getItem("users")) || [];
